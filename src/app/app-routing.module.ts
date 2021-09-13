@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'add-dog',
+    loadChildren: () => import('./add-dog/add-dog.module').then( m => m.AddDogPageModule)
+  },
+  {
+    path: 'last',
+    loadChildren: () => import('./last/last.module').then( m => m.LastPageModule)
+  }
 ];
 
 @NgModule({
