@@ -5,14 +5,15 @@
 </ion-header>
 <ion-content>
   <ion-title>Nome:</ion-title>
-  <ion-input class="centered-c" placeholder="Digite o nome do seu Amigo"></ion-input>
+  <ion-input class="centered-c" placeholder="Digite o nome do seu Amigo" type="text" [(ngModel)]="nome"></ion-input>
   <ion-title>Raça:</ion-title>
-  <ion-input class="centered-c" placeholder="Raça"></ion-input>
+  <ion-input class="centered-c" placeholder="Raça" type="text" [(ngModel)]="raca" ></ion-input>
   <ion-title>Sexo:</ion-title>
-  <ion-input class="centered-c" placeholder="Sexo do bixano"></ion-input>
+  <ion-input class="centered-c" placeholder="Sexo do bixano" type="text" [(ngModel)]="sexo"></ion-input>
   <ion-title>Telefone:</ion-title>
-  <ion-input class="centered-c" placeholder="Seu Número Aqui"></ion-input>
+  <ion-input class="centered-c" placeholder="Seu Número Aqui" type="text" [(ngModel)]="telefone"></ion-input>
   <img src="{{imgURL}}" height="200" width="200"/>
-  <ion-button (click)="getGallery()">gareria</ion-button>
-<ion-button (click)="getGallery()" href="/last">Pronto!</ion-button>
+  <br>
+  <ion-button (click)="getGallery()">galeria</ion-button>
+<ion-button (click)="saveTudo()" href="/last">Pronto!</ion-button>
 </ion-content>

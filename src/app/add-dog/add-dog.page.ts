@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Camera, DestinationType, PictureSourceType } from '@ionic-native/camera/ngx';
 
 @Component({
@@ -9,7 +9,20 @@ import { Camera, DestinationType, PictureSourceType } from '@ionic-native/camera
 export class AddDogPage implements OnInit {
 
   constructor(private camera: Camera) { }
+  pessoa: any = {
+    nome: "",
+    raca: "",
+    sexo: "",
+    telefone:"",
+    imagem: ""
+}
+
   imgURL;
+  @Input('nome') nome: string;
+  raca: string;
+  sexo: string;
+  telefone: string;
+
   ngOnInit() {
   }
 
@@ -34,4 +47,14 @@ export class AddDogPage implements OnInit {
       console.log(e);
     })
   }
+
+  saveTudo(){
+    this.pessoa.nome = this.nome;
+    this.pessoa.raca = this.raca;
+    this.pessoa.sexo = this.sexo;
+    this.pessoa.telefone = this.telefone;
+    this.pessoa.imagem = this.imgURL;
+  }
+
+  
 }
